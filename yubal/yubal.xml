@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/197157-support-yubal-self-hosted-youtube-music-downloader/</Support>
   <Project>https://github.com/guillevc/yubal</Project>
   <Overview>Self-hosted YouTube Music downloader with automatic metadata tagging and playlist sync.&#xD;
 &#xD;
