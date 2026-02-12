@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>yubal</Name>
+  <Repository>ghcr.io/guillevc/yubal:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/guillevc/yubal</Project>
+  <Overview>Self-hosted YouTube Music downloader with automatic metadata tagging and playlist sync.&#xD;
+&#xD;
+Paste a link, get a properly tagged and organized library. Subscribe to playlists to keep them synced. Albums sorted by artist and year. No duplicates. Media server ready.</Overview>
+  <Category>MediaApp:Music</Category>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/SerpentDrago/UnraidDockerTemplates/blob/main/yubal/icon.png?raw=true</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1770898468</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="8000" Default="8000" Mode="tcp" Description="Port to accsess application" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="YUBAL_SCHEDULER_CRON" Target="YUBAL_SCHEDULER_CRON" Default="" Mode="" Description="Cron Schedule for downloads" Type="Variable" Display="always" Required="false" Mask="false">0 0 * * *</Config>
+  <Config Name="YUBAL_DOWNLOAD_UGC" Target="YUBAL_DOWNLOAD_UGC" Default="false" Mode="" Description="Download user-generated content to _Unofficial/" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="YUBAL_TZ" Target="YUBAL_TZ" Default="UTC" Mode="" Description="Timezone (IANA format)" Type="Variable" Display="always" Required="false" Mask="false">UTC</Config>
+  <Config Name="/app/data" Target="/app/data" Default="/mnt/user/appdata/yubal/data" Mode="rw" Description="Location where you want Music stored , you should change this !" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/yubal/data</Config>
+  <Config Name="Yubal Config files" Target="/app/config" Default="/mnt/user/appdata/yubal/config" Mode="rw" Description="yubal config file location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/yubal/config</Config>
+  <TailscaleStateDir/>
+</Container>
